@@ -45,5 +45,10 @@ them.
 - Never add real business data, PII, or secrets here. Everything is synthetic
   on purpose.
 
-<!-- Task A adds a "## MCPs" section here, documenting the servers this
-     project expects to have connected and what each is for. -->
+## MCPs
+
+Проєкт очікує наступні MCP-сервери підключеними в хості:
+
+- **filesystem** — доступ до файлів репозиторію (обмежений каталогом проєкту). Дозволяє агенту читати вихідний код, дані каталогу (`app/data/catalog.json`) та документацію без прямого виклику shell-команд.
+- **memory** — in-memory граф знань для збереження контексту між запитами. Використовується для запам'ятовування проміжних результатів аналізу каталогу.
+- **catalog-server** (власний, `mcp-server/`) — тонкий MCP-адаптер над доменними функціями з `app/`. Надає tools для пошуку товарів, перевірки запасів та resource з підсумком каталогу. Read-only, без побічних ефектів.

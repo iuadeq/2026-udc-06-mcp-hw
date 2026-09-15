@@ -1,0 +1,25 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@anthropic-ai/mcp-filesystem@latest",
+        "/Users/iuade0tr/IdeaProjects/2026-udc-06-mcp-hw"
+      ]
+    },
+    "memory": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@anthropic-ai/mcp-memory@latest"
+      ]
+    },
+    "catalog": {
+      "command": "node",
+      "args": [
+        "/Users/iuade0tr/IdeaProjects/2026-udc-06-mcp-hw/mcp-server/dist/server.js"
+      ]
+    }
+  }
+}
